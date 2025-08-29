@@ -1,9 +1,9 @@
-Web Table Classification
+#**Web Table Classification**
 
 This repository contains the code and data used in my thesis on automatic identification and classification of web tables.
 The work combines feature-based machine learning models and image-based deep learning models (CNNs) to classify tables based on their header locations.
 
-Abstract
+#Abstract
 
 Tables are one of the most common ways of presenting structured and complex information. However, the wide variety of web table formats and styles makes it difficult to ensure clear presentation for all users—especially those with visual disabilities who rely on speech-based access.
 
@@ -17,8 +17,8 @@ Custom CNN (images): F1-Score = 0.93
 
 The primary contribution of this work is advancing automated web table mining and improving accessibility for visually impaired users.
 
-Repository Structure
-1. Data
+#Repository Structure
+**1. Data**
 
 Contains everything related to dataset creation and preprocessing.
 
@@ -28,7 +28,7 @@ Labeling Tool: A custom annotation tool used by human annotators to assign class
 
 Preprocessing: Scripts for cleaning and preparing the labeled dataset for model training.
 
-2. Classification
+**2. Classification**
 
 Contains model implementations and experiments for table classification.
 
