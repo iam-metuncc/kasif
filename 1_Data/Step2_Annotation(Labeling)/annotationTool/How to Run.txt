@@ -1,0 +1,31 @@
+# Note, the steps and the files below are for only 3 annotators. 
+
+
+1. Create the DB. Call it "annotationtool". Or adjust the name from the config.php file 
+
+2. Inside the DB create, create the table "annotations" using the following sql query: 
+
+CREATE TABLE annotations (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    pageName VARCHAR(255) COLLATE utf8mb4_general_ci NOT NULL,
+    tableNumber VARCHAR(255) COLLATE utf8mb4_general_ci NOT NULL,
+    label1 VARCHAR(255) COLLATE utf8mb4_general_ci NOT NULL,
+    label2 VARCHAR(255) COLLATE utf8mb4_general_ci NOT NULL,
+    label3 VARCHAR(255) COLLATE utf8mb4_general_ci NOT NULL,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+3. The images of tables to be annotated or labelled should be stored in a folder. For example, there is a folder called 'webPages', inside webPages there is 'sindar'. Sindar
+is the name of the page. Inside 'sindar', there are the tables that are taken from that page. 
+
+4. Run databaseInserter so that the data is loaded to the annotations table created in the DB. using:  http://localhost/annotationtool/dataInserter.php
+
+5. There are different files for annotators. annotator1.txt, annotator2.txt, annotator3.txt. These files track where each annotator stopped. 
+Each files contains two parts of a text (separated by space). The first one is the page name and the second one is the table counter in that page. For example, "0001_sindar 2" means
+the page name is 0001_sidnar, and 2 means it's the second table in the page. 
+
+Important: At the beginning, make sure that they all have the following text: none none
+
+6. To start the process, for annotator 1 for example: visit -> localhost/annotationtool?annotator=1, this will display the tool for the annotator where they will be able to choose a class, 
+once the class is chosen, it will be reflected to the DB under label1 in the annotations table. For other annotators, just replace the 1 with 2 or 3. 
