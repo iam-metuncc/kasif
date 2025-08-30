@@ -5,7 +5,7 @@ The work combines feature-based machine learning models and image-based deep lea
 
 # Abstract
 
-Tables are one of the most common ways of presenting structured and complex information. However, the wide variety of web table formats and styles makes it difficult to ensure clear presentation for all users—especially those with visual disabilities who rely on speech-based access.
+Tables are one of the most common ways of presenting structured and complex information. However, the wide variety of web table formats and styles makes it difficult to ensure clear presentation for all users, especially those with visual disabilities who rely on speech-based access.
 
 This project explores the automatic classification of web tables into nine categories based on header location. Unlike previous methods that rely solely on raw HTML features, this work uses both rendered features and rendered images of tables, capturing how they appear to users in a browser.
 
