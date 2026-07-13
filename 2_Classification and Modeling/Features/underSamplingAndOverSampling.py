@@ -16,7 +16,7 @@ from sklearn.svm import SVC
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.neighbors import KNeighborsClassifier
 import warnings
-
+ 
 warnings.filterwarnings('ignore')
 # List of categories
 CAT = ['no_header', 'value_attr', 'col_0', 'row_0_col_0', 'row_01_col_0', 'row_012', 'row_01', 'row_0', 'others']
